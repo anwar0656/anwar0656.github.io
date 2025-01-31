@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Muhammad Anwar</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Muhammad Anwar</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 31 Jan 2025 18:24:05 +0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beginner`s` Guide to Mastering Markdown </title>
+      <link>http://localhost:1313/posts/guide-markdow/</link>
+      <pubDate>Fri, 31 Jan 2025 18:24:05 +0500</pubDate>
+      <guid>http://localhost:1313/posts/guide-markdow/</guid>
+      <description>&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of contents&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#what-is-markdown-&#34;&gt;What is markdown ?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#commands-of-markdown-language&#34;&gt;Commands of Markdown language&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#inserting-table&#34;&gt;Inserting Table&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Welcome to the world of markdown! if you ever wished to find an easy way to format text without diving
+into complex code of HTML,CSS,JS. Markdown is the perfect solution, We`ll take you through the essentials of Markdown and show you how simple
+it is to use for creating a clean and readable content.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

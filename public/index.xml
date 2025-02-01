@@ -6,8 +6,19 @@
     <description>Recent content on Muhammad Anwar</description>
     <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jan 2025 18:24:05 +0500</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2025 12:00:50 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Roadmap to Become a Website Developer</title>
+      <link>http://localhost:1313/posts/web-blog/</link>
+      <pubDate>Sat, 01 Feb 2025 12:00:50 +0500</pubDate>
+      <guid>http://localhost:1313/posts/web-blog/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Are you aspiring to become a website developer but unsure where to start ? The world of web development is vast,but with a right roadmap, you can navigate it successfully. Wheather your`re a beginner or looking to refine your skills, this guide will walk through the essentials steps to becoming a proficient website developer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-web-development-&#34;&gt;What is web Development ?&lt;/h2&gt;
+&lt;p&gt;Web development is the process of creating,building and maintaining of website and web applications that run on online browser.It involves a markup language and combination of programming language.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Beginner`s Guide to Mastering Markdown </title>
       <link>http://localhost:1313/posts/guide-markdow/</link>

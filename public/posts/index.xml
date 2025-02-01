@@ -9,12 +9,11 @@
     <lastBuildDate>Fri, 31 Jan 2025 18:24:05 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Guide Markdow</title>
+      <title>Beginner`s Guide to Mastering Markdown </title>
       <link>http://localhost:1313/posts/guide-markdow/</link>
       <pubDate>Fri, 31 Jan 2025 18:24:05 +0500</pubDate>
       <guid>http://localhost:1313/posts/guide-markdow/</guid>
-      <description>&lt;h1 id=&#34;beginners-guide-to-mastering-markdown&#34;&gt;Beginner`s Guide to Mastering Markdown&lt;/h1&gt;
-&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of contents&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of contents&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;#what-is-markdown-&#34;&gt;What is markdown ?&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;#commands-of-markdown-language&#34;&gt;Commands of Markdown language&lt;/a&gt;&lt;/p&gt;

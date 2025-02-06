@@ -5,9 +5,3 @@ theme = 'hugo-PaperMod'
 
 [params]
 ShowCodeCopyButtons = true
-ShowBreadCrumbs = true
-ShowToc = true
-ShowReadingTime = true
-tags = true
-ShowPostNavLinks = true
-ShowShareButtons = true

@@ -6,23 +6,32 @@
     <description>Recent content in Posts on Muhammad Anwar</description>
     <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jan 2025 18:24:05 +0500</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2025 12:00:50 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Roadmap to Become a Website Developer</title>
+      <link>http://localhost:1313/posts/web-blog/</link>
+      <pubDate>Sat, 01 Feb 2025 12:00:50 +0500</pubDate>
+      <guid>http://localhost:1313/posts/web-blog/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Are you aspiring to become a website developer but unsure where to start ? The world of web development is vast,but with a right roadmap, you can navigate it successfully. Wheather your`re a beginner or looking to refine your skills, this guide will walk through the essentials steps to becoming a proficient website developer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-web-development-&#34;&gt;What is web Development ?&lt;/h2&gt;
+&lt;p&gt;Web development is the process of creating,building and maintaining of website and web applications that run on online browser.It involves a markup language and combination of programming language.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Beginner`s Guide to Mastering Markdown </title>
       <link>http://localhost:1313/posts/guide-markdow/</link>
       <pubDate>Fri, 31 Jan 2025 18:24:05 +0500</pubDate>
       <guid>http://localhost:1313/posts/guide-markdow/</guid>
-      <description>&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of contents&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;#what-is-markdown-&#34;&gt;What is markdown ?&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;#commands-of-markdown-language&#34;&gt;Commands of Markdown language&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;#inserting-table&#34;&gt;Inserting Table&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Welcome to the world of markdown! if you ever wished to find an easy way to format text without diving
 into complex code of HTML,CSS,JS. Markdown is the perfect solution, We`ll take you through the essentials of Markdown and show you how simple
-it is to use for creating a clean and readable content.&lt;/p&gt;</description>
+it is to use for creating a clean and readable content.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;what-is-markdown-&#34;&gt;What is Markdown ?&lt;/h3&gt;
+&lt;p&gt;Markdown is a markup language that allows you to create a formatted text such as headings,lists,links and images
+without the need of complex &lt;strong&gt;HTML&lt;/strong&gt; code. It is widely used in variety of platforms, from blogging to coding documentation&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

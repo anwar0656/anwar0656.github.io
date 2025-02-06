@@ -2,3 +2,12 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Muhammad Anwar'
 theme = 'hugo-PaperMod'
+
+[params]
+ShowCodeCopyButtons = true
+ShowBreadCrumbs = true
+ShowToc = true
+ShowReadingTime = true
+tags = true
+ShowPostNavLinks = true
+ShowShareButtons = true

@@ -88,8 +88,8 @@ Once your website is ready now its time to deploy it so other can access it;
 
  [SQL](https://www.youtube.com/watch?v=hlGoQC332VM)
 
---- 
+---
 ## Conclusion
 Becoming a website developer is an exciting journey that requires dedication,practice,
 and continous learning. By following this roadmap, you`ll be well on your way to mastering skillsneeded to build amazing websites.
-Remember, The key to success is consistency and a passion for problem-solving. HAPPY CODING! 
+Remember, The key to success is consistency and a passion for problem-solving. HAPPY CODING!

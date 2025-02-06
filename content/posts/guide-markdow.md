@@ -4,16 +4,6 @@ title = 'Beginner`s Guide to Mastering Markdown '
 +++
 
 
-## Table of contents
-[Introduction](#introduction)
-
-[What is markdown ?](#what-is-markdown-)
-
-[Commands of Markdown language](#commands-of-markdown-language)
-
-[Inserting Table](#inserting-table)
-
-[Conclusion](#conclusion)
 
 ## Introduction
 Welcome to the world of markdown! if you ever wished to find an easy way to format text without diving

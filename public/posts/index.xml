@@ -33,5 +33,14 @@ it is to use for creating a clean and readable content.&lt;/p&gt;
 &lt;p&gt;Markdown is a markup language that allows you to create a formatted text such as headings,lists,links and images
 without the need of complex &lt;strong&gt;HTML&lt;/strong&gt; code. It is widely used in variety of platforms, from blogging to coding documentation&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>What is an API? A Beginner&#39;s Guide &#43; Project using API </title>
+      <link>http://localhost:1313/posts/api-blog/</link>
+      <pubDate>Fri, 31 Jan 2025 18:24:05 +0500</pubDate>
+      <guid>http://localhost:1313/posts/api-blog/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;In the world of web development, APIs (Application Programming Interfaces) are vital for enabling applications to communicate with each other. APIs allow one piece of software to request data or services from another system, making it easier to integrate features and external services into your projects.&lt;/p&gt;
+&lt;p&gt;In this blog post, we’ll break down what an API is and how it works. We&amp;rsquo;ll also guide you through a fun project: building a weather forecast web application that uses an API to fetch real-time weather data!&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

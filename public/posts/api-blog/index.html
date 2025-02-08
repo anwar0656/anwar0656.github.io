@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>What is an API? A Beginner&#39;s Guide &#43; Project using API  | Muhammad Anwar</title>
+<meta name="keywords" content="">
+<meta name="description" content="Introduction
+In the world of web development, APIs (Application Programming Interfaces) are vital for enabling applications to communicate with each other. APIs allow one piece of software to request data or services from another system, making it easier to integrate features and external services into your projects.
+In this blog post, we’ll break down what an API is and how it works. We&rsquo;ll also guide you through a fun project: building a weather forecast web application that uses an API to fetch real-time weather data!">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/api-blog/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/api-blog/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Muhammad Anwar (Alt + H)">Muhammad Anwar</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      What is an API? A Beginner&#39;s Guide &#43; Project using API 
+    </h1>
+    <div class="post-meta"><span title='2025-01-31 18:24:05 +0500 PKT'>January 31, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h1>
+<p>In the world of web development, APIs (Application Programming Interfaces) are vital for enabling applications to communicate with each other. APIs allow one piece of software to request data or services from another system, making it easier to integrate features and external services into your projects.</p>
+<p>In this blog post, we’ll break down what an API is and how it works. We&rsquo;ll also guide you through a fun project: building a weather forecast web application that uses an API to fetch real-time weather data!</p>
+<hr>
+<h2 id="what-is-api-">What is API ?<a hidden class="anchor" aria-hidden="true" href="#what-is-api-">#</a></h2>
+<p>An API (Application Programming Interface) is a set of rules that allows one piece of software to interact with another. You can think of it as a waiter in a restaurant: you place an order (the request), and the waiter (the API) takes your order to the kitchen (the server), where the chef prepares your food (the response), and the waiter brings it back to you.</p>
+<p>APIs allow different applications, systems, or services to communicate by sending and receiving requests and responses. Most APIs are designed to work with web protocols like HTTP, making them ideal for web applications.</p>
+<h2 id="how-api-works-">How API works ?<a hidden class="anchor" aria-hidden="true" href="#how-api-works-">#</a></h2>
+<p>An API works by allowing two software systems to communicate with each other. When a user interacts with an application, it sends a request to an API, asking for specific data or to perform an action. The API processes this request, retrieves the necessary information from a server or database, and then sends the response back to the application. The response, typically in a format like JSON, contains the requested data, which the application can then display or use. APIs simplify the process by providing a standard way for systems to share and access data without needing to understand the underlying details.</p>
+<h2 id="why-api-matters-">Why API matters ?<a hidden class="anchor" aria-hidden="true" href="#why-api-matters-">#</a></h2>
+<ul>
+<li>Data Integration: APIs allow web applications to access and display data from various sources.</li>
+<li>Third-Party Services: You can integrate external services like weather forecasts, payment systems, or social media APIs without building everything from scratch.</li>
+<li>Automation: APIs can trigger actions in other systems without requiring user input.</li>
+</ul>
+<hr>
+<h2 id="creating-a-weather-forcast-web-application-using-api">Creating a <strong>Weather Forcast Web Application Using API</strong><a hidden class="anchor" aria-hidden="true" href="#creating-a-weather-forcast-web-application-using-api">#</a></h2>
+<p>It is very simple to create a weather forcast web application. Just all we need is an API and through this we can easily create a web application using an AI which will create us a web application using over API. There are few steps you need to follow up so there would be less chance of any errors.</p>
+<h3 id="step-1">Step 1.<a hidden class="anchor" aria-hidden="true" href="#step-1">#</a></h3>
+<p>Visi a website named as <a href="https://www.weatherapi.com/">weather api</a>. Sign in first as it is mandatory to get an API of free. As most of authentic websites are paid but don`t worry this API is totally free.</p>
+<h3 id="step-2">Step 2.<a hidden class="anchor" aria-hidden="true" href="#step-2">#</a></h3>
+<p>After signing up in weather API you can see on your left s <strong>Dashboard</strong> on dashboard click on API than you will see a welcome msg and API key. Copy that API.</p>
+<h3 id="step-3">Step 3.<a hidden class="anchor" aria-hidden="true" href="#step-3">#</a></h3>
+<p>After copying API from dashboard click on <strong>Tools</strong> on your left side of your web page. In tools you will find an option of API Explorer click on that.</p>
+<h3 id="step-4">Step 4.<a hidden class="anchor" aria-hidden="true" href="#step-4">#</a></h3>
+<p>After clicking on <strong>API Explorer</strong> you can see option of <strong>Your API Key</strong> paste your api there. Than scrool down there you will find an option of <strong>Value</strong> by default value will be no you have to click on it and made it YES &amp; than click on on <strong>Show Response</strong>.</p>
+<h2 id="note">NOTE:<a hidden class="anchor" aria-hidden="true" href="#note">#</a></h2>
+<p>Step 4 is mandatory than all other steps. If step 4 is not performed well than it is possible you might face errors.</p>
+<h3 id="step-5">Step 5.<a hidden class="anchor" aria-hidden="true" href="#step-5">#</a></h3>
+<p>After Clicking on Show Response down you can see alot options. You dont need to woory about all the options just focus on top most option mong them named as <strong>Call</strong> that is your new API. Copy that API as we are going to use that API.</p>
+<h3 id="step-6">Step 6.<a hidden class="anchor" aria-hidden="true" href="#step-6">#</a></h3>
+<p>That`s all all the important steps are done now. We just need to build our web application now which AI will do that for us :)</p>
+<h3 id="step-7">Step 7<a hidden class="anchor" aria-hidden="true" href="#step-7">#</a></h3>
+<p>Open Chatgpt and give it a Prompt</p>
+<blockquote>
+<p><strong>Create a weather app for me, I will provide you API {paste you api link } write a stylish and responsive HTML CSS &amp; JS for my website, I will take location as input from user and show him temperature of that day</strong></p>
+</blockquote>
+<p>=&gt; After giving this chatgpt or any other AI will provide you HTML,CSS and JS code and down below there it will chow you how it actually works. Actually you have to link all these file together in index.html file so plz do it carefully.</p>
+<h3 id="your-weather-forcast-web-application-is-ready">Your Weather Forcast Web application is Ready.<a hidden class="anchor" aria-hidden="true" href="#your-weather-forcast-web-application-is-ready">#</a></h3>
+<p>After doing all these steps run you index.html file. Your project is ready to go. You can either add this project in your <strong>Resume</strong> Thankyou and Best of luck from <strong>MUHAMMAD ANWAR</strong>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Muhammad Anwar</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

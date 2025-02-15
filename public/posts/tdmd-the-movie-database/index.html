@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>🎬 How to Create a TMDB Movie Database Using HTML, CSS, and JavaScript  | Muhammad Anwar</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+🔹 Introduction
+The TMDB (The Movie Database) API is a powerful tool that provides detailed information about movies, including titles, release dates, ratings, and overviews. In this guide, I’ll walk you through the process of creating a simple movie search app that fetches and displays movie details dynamically.
+By the end of this tutorial, you’ll have a functional movie database web app that allows users to search for movies and view their details.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/tdmd-the-movie-database/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/tdmd-the-movie-database/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Muhammad Anwar (Alt + H)">Muhammad Anwar</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      🎬 How to Create a TMDB Movie Database Using HTML, CSS, and JavaScript 
+    </h1>
+    <div class="post-meta"><span title='2025-02-15 18:24:05 +0500 PKT'>February 15, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="heading"><a hidden class="anchor" aria-hidden="true" href="#heading">#</a></h1>
+<h2 id="-introduction">🔹 Introduction<a hidden class="anchor" aria-hidden="true" href="#-introduction">#</a></h2>
+<p>The <strong>TMDB (The Movie Database) API</strong> is a powerful tool that provides detailed information about movies, including titles, release dates, ratings, and overviews. In this guide, I’ll walk you through the process of creating a simple <strong>movie search app</strong> that fetches and displays movie details dynamically.</p>
+<p>By the end of this tutorial, you’ll have a functional <strong>movie database web app</strong> that allows users to search for movies and view their details.</p>
+<hr>
+<h2 id="-prerequisites">🔹 Prerequisites<a hidden class="anchor" aria-hidden="true" href="#-prerequisites">#</a></h2>
+<p>Before getting started, ensure you have the following:<br>
+✔ Basic knowledge of <strong>HTML, CSS, and JavaScript</strong><br>
+✔ A <strong>TMDB API Key</strong> (We will generate it in Step 1)<br>
+✔ A <strong>text editor</strong> (e.g., VS Code, Sublime Text)<br>
+✔ A <strong>web browser</strong> (Chrome, Firefox, Edge, etc.)</p>
+<hr>
+<h2 id="-step-1-get-a-tmdb-api-key">🔹 Step 1: Get a TMDB API Key<a hidden class="anchor" aria-hidden="true" href="#-step-1-get-a-tmdb-api-key">#</a></h2>
+<p>To use the TMDB API, you need an <strong>API key</strong>. Follow these steps to generate one:</p>
+<ol>
+<li><strong>Go to TMDB’s website</strong>: Visit <a href="https://www.themoviedb.org/">The Movie Database (TMDB)</a>.</li>
+<li><strong>Sign up / Log in</strong>: If you don’t have an account, sign up for free. Otherwise, log in.</li>
+<li><strong>Go to API Settings</strong>: Click on your <strong>profile picture</strong> in the top right corner, then navigate to <strong>Settings</strong> &gt; <strong>API</strong>.</li>
+<li><strong>Request an API Key</strong>: TMDB requires you to apply for an API key. Click on <strong>Create API Key</strong> and fill out the required details.</li>
+<li><strong>Copy Your API Key</strong>: Once approved, you will receive a <strong>unique API key</strong>. Copy it—you’ll need it later.</li>
+<li><strong>Read the API Documentation</strong>: Check out the <a href="https://developer.themoviedb.org/">TMDB API Documentation</a> to understand how the API works.</li>
+</ol>
+<p>Once you have your API key, you’re ready to move on to the next step.</p>
+<hr>
+<h2 id="-step-2-set-up-the-html-structure">🔹 Step 2: Set Up the HTML Structure<a hidden class="anchor" aria-hidden="true" href="#-step-2-set-up-the-html-structure">#</a></h2>
+<p>Start by creating a simple <strong>HTML file</strong> that includes:</p>
+<ul>
+<li>A <strong>text input field</strong> where users can enter a movie name.</li>
+<li>A <strong>search button</strong> to trigger the movie search.</li>
+<li>A <strong>section to display movie results</strong> dynamically.</li>
+</ul>
+<p>This basic structure will allow users to interact with the application.</p>
+<hr>
+<h2 id="-step-3-style-the-app-with-css">🔹 Step 3: Style the App with CSS<a hidden class="anchor" aria-hidden="true" href="#-step-3-style-the-app-with-css">#</a></h2>
+<p>To make the app visually appealing, create a <strong>CSS file</strong> and style the elements.</p>
+<ul>
+<li>Use a <strong>dark theme</strong> background to enhance the movie search experience.</li>
+<li>Style the <strong>movie cards</strong> with rounded corners and subtle shadows.</li>
+<li>Ensure the <strong>app is responsive</strong> so it looks good on different screen sizes.</li>
+</ul>
+<p>CSS will help improve the user experience by making the movie list <strong>well-organized and visually appealing</strong>.</p>
+<hr>
+<h2 id="-step-4-fetch-movie-data-using-the-tmdb-api">🔹 Step 4: Fetch Movie Data Using the TMDB API<a hidden class="anchor" aria-hidden="true" href="#-step-4-fetch-movie-data-using-the-tmdb-api">#</a></h2>
+<p>To get movie details, you’ll need to:</p>
+<ol>
+<li>Use JavaScript’s <code>fetch()</code> function to call the <strong>TMDB API</strong>.</li>
+<li>Pass your <strong>API key</strong> along with the request.</li>
+<li>Retrieve <strong>movie title, release date, rating, and overview</strong> from the API response.</li>
+<li>Display the movie data dynamically inside your HTML.</li>
+</ol>
+<p>If a movie doesn’t have an image, you can use a <strong>placeholder image</strong> to maintain a clean design.</p>
+<hr>
+<h2 id="-step-5-display-movie-results-dynamically">🔹 Step 5: Display Movie Results Dynamically<a hidden class="anchor" aria-hidden="true" href="#-step-5-display-movie-results-dynamically">#</a></h2>
+<p>Once you fetch movie data, you’ll need to:</p>
+<ul>
+<li>Create <strong>movie cards</strong> dynamically in JavaScript.</li>
+<li>Append the cards to the movie list section in your HTML.</li>
+<li>Format the results properly so users can read details easily.</li>
+<li>Add error handling in case the API request fails or the movie isn&rsquo;t found.</li>
+</ul>
+<p>This step ensures that your app updates dynamically whenever a user searches for a new movie.</p>
+<hr>
+<h2 id="-step-6-test-and-improve-the-app">🔹 Step 6: Test and Improve the App<a hidden class="anchor" aria-hidden="true" href="#-step-6-test-and-improve-the-app">#</a></h2>
+<p>After setting everything up, test your movie search app by:<br>
+✔ Searching for different movies and checking the results.<br>
+✔ Ensuring images, titles, ratings, and descriptions appear correctly.<br>
+✔ Handling edge cases, such as empty search queries or missing movie details.</p>
+<p>If everything works as expected, you can further <strong>improve the app</strong> by:</p>
+<ul>
+<li>Adding a <strong>loading spinner</strong> while fetching data.</li>
+<li>Implementing <strong>pagination</strong> for more movie results.</li>
+<li>Creating a <strong>favorites list</strong> where users can save their favorite movies.</li>
+</ul>
+<hr>
+<h2 id="-final-thoughts">🔹 Final Thoughts<a hidden class="anchor" aria-hidden="true" href="#-final-thoughts">#</a></h2>
+<p>Building a <strong>TMDB Movie Search App</strong> is a great way to practice <strong>working with APIs</strong> and handling <strong>dynamic content</strong> in JavaScript. With just <strong>HTML, CSS, and JavaScript</strong>, you can create a simple yet powerful application that provides movie details in real-time.</p>
+<h2 id="-conclusion">🔹 Conclusion<a hidden class="anchor" aria-hidden="true" href="#-conclusion">#</a></h2>
+<p>Congratulations! 🎉 You have successfully learned how to create a <strong>movie search app</strong> using the <strong>TMDB API</strong>. From setting up the HTML structure to styling it with CSS and fetching data using JavaScript, you now understand how to work with an external API to display real-time movie information dynamically.</p>
+<p>This project is a <strong>great way to practice working with APIs</strong>, and there’s always room for improvement! Try adding new features like:<br>
+✔ <strong>Search by genre or actor</strong><br>
+✔ <strong>A “Favorites” section</strong><br>
+✔ <strong>More detailed movie information</strong></p>
+<p>With these additions, your project can become a fully functional <strong>movie database application</strong>!</p>
+<hr>
+<h2 id="-happy-coding-">🎉 Happy Coding! 🚀<a hidden class="anchor" aria-hidden="true" href="#-happy-coding-">#</a></h2>
+<p>Coding is all about experimenting and learning new things. Keep exploring new ideas, push your limits, and don’t be afraid to <strong>make mistakes</strong>—that’s how you grow!</p>
+<p>I hope you had fun building this project. Now go ahead, grab some popcorn 🍿, and enjoy exploring the world of movies! 🎬✨</p>
+<p>Happy coding! 😊💻🚀</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Muhammad Anwar</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

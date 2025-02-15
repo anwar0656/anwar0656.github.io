@@ -6,8 +6,18 @@
     <description>Recent content in Posts on Muhammad Anwar</description>
     <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2025 12:00:50 +0500</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2025 18:24:05 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🎬 How to Create a TMDB Movie Database Using HTML, CSS, and JavaScript </title>
+      <link>http://localhost:1313/posts/tdmd-the-movie-database/</link>
+      <pubDate>Sat, 15 Feb 2025 18:24:05 +0500</pubDate>
+      <guid>http://localhost:1313/posts/tdmd-the-movie-database/</guid>
+      <description>&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;-introduction&#34;&gt;🔹 Introduction&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;TMDB (The Movie Database) API&lt;/strong&gt; is a powerful tool that provides detailed information about movies, including titles, release dates, ratings, and overviews. In this guide, I’ll walk you through the process of creating a simple &lt;strong&gt;movie search app&lt;/strong&gt; that fetches and displays movie details dynamically.&lt;/p&gt;
+&lt;p&gt;By the end of this tutorial, you’ll have a functional &lt;strong&gt;movie database web app&lt;/strong&gt; that allows users to search for movies and view their details.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Roadmap to Become a Website Developer</title>
       <link>http://localhost:1313/posts/web-blog/</link>

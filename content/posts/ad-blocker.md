@@ -1,5 +1,5 @@
 +++
-date = '2025-03-3T18:24:05+05:00'
+date = '2025-03-03T18:24:05+05:00'
 title = "How I Created a Simple Ad Blocker Extension for Google Chrome "
 +++
 

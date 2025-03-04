@@ -53,26 +53,21 @@ This file tells Chrome about your extension, including its name, version, and pe
 This file tells Chrome about your extension, including its name, version, and permissions. Here's the code:
 
 ```json
-{
-    "name": "Simple Ad Blocker",
-    "version": "1.0.0",
-    "manifest_version": 3,
-    "permissions": [
-        "declarativeNetRequest"
-    ],
-    "host_permissions": [
-        "https://*/*"
-    ],
-    "declarative_net_request": {
-        "rule_resources": [
-            {
-                "id": "ruleset_1",
-                "enabled": true,
-                "path": "rules.json"
-            }
-        ]
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": { "type": "block" },
+        "condition": { "urlFilter": "doubleclick.net" }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": { "type": "block" },
+        "condition": { "urlFilter": "googleadservices.com" }
     }
-}
+]
+
 
 ```
 

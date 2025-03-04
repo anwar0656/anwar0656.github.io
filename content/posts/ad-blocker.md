@@ -101,7 +101,7 @@ To test if your ad blocker is working, follow these steps:
 Congratulations! You've successfully created a simple ad blocker extension for Google Chrome. This extension blocks requests to specific ad-serving domains, improving your browsing experience. You can further customize it by adding more rules or exploring other features of the `declarativeNetRequest` API.
 
 If you don't want to go through the entire process of creating the extension yourself, you can download my **ready-to-use extension** here:  
-[Download Simple Ad Blocker Extension](https://drive.google.com/drive/folders/1t8ZLQetSMlnIHEz-FaeOO39gVMohvm7v?usp=drive_link)
+[Download Simple Ad Blocker Extension](https://drive.google.com/drive/folders/1t8ZLQetSMlnIHEz-FaeOO39gVMohvm7v?usp=sharing)
 
 Simply download the file, extract it, and follow the steps in **Step 4** to load it into Chrome.
 
